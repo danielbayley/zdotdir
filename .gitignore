@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+
+# Zsh
+.zcompdump
+.zsh_*
+*.zwc

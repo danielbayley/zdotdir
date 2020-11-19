@@ -1,0 +1,5 @@
+alias mode='stat -f %A'
+alias created='getfileinfo -d'
+alias version='mdls -name kMDItemVersion -raw'
+alias mime='file --mime-type -b'
+alias {postscript,ps,font}name='fc-scan --format %{postscriptname}'
