@@ -15,6 +15,10 @@ class Zdotdir < Formula
     doc.install_metafiles
   end
 
+  def post_install
+    system "#{HOMEBREW_BREW_FILE} completions link"
+  end
+
   def caveats
     <<~EOS
       Consider adding to your Brewfile:
@@ -23,13 +27,13 @@ class Zdotdir < Formula
   end
 
   service do
-    zdotdir = @formula.tap.path/"zdotdir"
+    zdotdir = @formula.tap.path/@formula.name.downcase
     run ["/bin/launchctl", "setenv", @formula.name.upcase, zdotdir]
     keep_alive path: zdotdir/".zshenv"
   end
 
   test do
-    ENV["ZDOTDIR"] = testpath
+    ENV[@formula.name.upcase] = testpath
     touch ".zshenv"
     sourced = shell_output "zsh --source-trace -c exec 2>&1"
     assert_match "#{testpath}/.zshenv", sourced
