@@ -1,4 +1,6 @@
+# https://zsh-manual.netlify.app/options#16-options
 setopt extended_glob
+alias opt{ion,}s=setopt
 
 alias autoload='autoload -Uz'
 alias zcompile='zcompile -Rz'
