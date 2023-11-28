@@ -1,6 +1,6 @@
 # https://zsh-manual.netlify.app/options#1621-changing-directories
 setopt auto_cd chase_links
-setopt auto_pushd pushd_{ignore_dups,to_HOME,minus,silent}
+setopt auto_pushd pushd_{ignore_dups,to_HOME,minus}
 
 for __i ({2..6}) do
   printf -v __n        '.%.0s' {1..$__i}
