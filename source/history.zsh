@@ -1,4 +1,4 @@
-mkdir $HISTFILE:h
+command mkdir -p $HISTFILE:h
 
 setopt append_history
 setopt hist_{no_store,reduce_blanks,ignore_space}
