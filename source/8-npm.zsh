@@ -41,6 +41,8 @@ alias  cjs{to,-}esm='npx cjstoesm'
 alias js{2,-}coffee='npx js2coffee'
 # https://coffeescript.org#cli
 alias        coffee='npx --package coffee{script,}'
+# https://civet.dev/getting-started#executing-code
+alias         civet='npx @danielx/civet'
 
 # Testing/format
 # https://coffeelint.github.io#usage
