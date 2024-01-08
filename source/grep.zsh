@@ -1,6 +1,7 @@
 alias egrep='grep --extended-regexp'
 alias grep=egrep
 alias envgrep='env | grep'
+alias l{s,}grep='ls | grep'
 
 # https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#user-guide
 if (($+commands[rg])) then
