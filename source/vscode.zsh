@@ -6,4 +6,4 @@ alias vcse='npx @vscode/vsce'
 alias ovsx='npx ovsx'
 
 # https://code.visualstudio.com/docs/editor/command-line#_core-cli-options
-alias edit="${=VISUAL:-$EDITOR} --goto"
+alias edit='${=${${VISUAL:-$EDITOR}:#code*}:-${VISUAL:-$EDITOR} --goto}'
