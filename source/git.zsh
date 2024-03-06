@@ -2,7 +2,6 @@
 alias  clone='git clone'
 alias  stage='git stage'
 alias staged='git staged'
-alias commit='git commit'
 
 # https://cli.github.com/manual
 alias gist='gh gist'
