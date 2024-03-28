@@ -12,6 +12,6 @@ alias dirs='dirs -p'
 
 if [ $TERM_PROGRAM = Apple_Terminal ] && $0:h:h/libexec/terminal-tabs.js
 then
-  defaults read com.apple.finder NewWindowTargetPath 2> /dev/null | read
+  defaults read com.apple.finder NewWindowTargetPath | read
   pushd ${REPLY#file://}
-fi
+fi 2> /dev/null
