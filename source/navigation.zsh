@@ -8,6 +8,8 @@ for __i ({2..6}) do
   alias {,cd}$__n="cd $__parent"
 done
 
+alias cd_='cd $_:t:r'
+
 alias dirs='dirs -p'
 
 if [ $TERM_PROGRAM = Apple_Terminal ] && $0:h:h/libexec/terminal-tabs.js
