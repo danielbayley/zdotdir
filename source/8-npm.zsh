@@ -1,9 +1,5 @@
 # https://nodejs.org/api
 alias js=node
-if ((`node --version | read && echo ${REPLY:1:2}` >= 21))
-then alias node='node --experimental-default-type module'
-else node() command node $@[1,#-1] --input-type module < $@[#]
-fi
 
 # https://nodejs.org/api/corepack.html#corepack
 if (($+commands[corepack] && !$+commands[pnpm])) corepack enable
