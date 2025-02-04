@@ -8,6 +8,12 @@ fi
 # https://nodejs.org/api/corepack.html#corepack
 if (($+commands[corepack] && !$+commands[pnpm])) corepack enable
 
+# https://github.com/nvm-sh/nvm#intro
+if ([ -s $HOMEBREW_PREFIX/opt/nvm/nvm.sh ]) then
+  source $HOMEBREW_PREFIX/opt/nvm/nvm.sh
+  source $HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm
+fi
+
 # https://npmjs.com
 alias n=npm
 # https://pnpm.io
