@@ -4,10 +4,12 @@ alias js=node
 # https://nodejs.org/api/corepack.html#corepack
 if (($+commands[corepack] && !$+commands[pnpm])) corepack enable
 
-# https://github.com/nvm-sh/nvm#intro
+# https://github.com/nvm-sh/nvm#usage-1
 if ([ -s $HOMEBREW_PREFIX/opt/nvm/nvm.sh ]) then
-  source $HOMEBREW_PREFIX/opt/nvm/nvm.sh
+  PREFIX= source $HOMEBREW_PREFIX/opt/nvm/nvm.sh
   source $HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm
+  alias nvm='PREFIX= nvm'
+  nvm alias default node > /dev/null
 fi
 
 # https://npmjs.com
