@@ -1,2 +1,2 @@
 command mkdir -p ${@:-mkdir.$RANDOM}
-pushd $_
+if (($# < 3)) pushd $2
