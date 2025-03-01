@@ -1,9 +1,6 @@
 # https://nodejs.org/api
 alias js=node
 
-# https://nodejs.org/api/corepack.html#corepack
-if (($+commands[corepack] && !$+commands[pnpm])) corepack enable
-
 # https://github.com/Schniz/fnm/blob/master/docs/commands.md
 if (($+commands[fnm])) alias nvm=fnm
 
