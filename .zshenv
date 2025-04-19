@@ -1,6 +1,6 @@
 setopt all_export pipe_fail glob_assign
 
-typeset -U path
+typeset -U path fpath
 source /etc/profile
 source <(brew shellenv)
 
