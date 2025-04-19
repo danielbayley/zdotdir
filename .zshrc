@@ -8,11 +8,13 @@ alias zcompile='zcompile -Rz'
 autoload $fpath[1]/^(_|prompt_|*.)*(-.N:t:r)
 
 __autoload=(${ZDOTDIR:=$0:h}/autoload/*.*(xN))
-unset -f $^__autoload:t:r 2> /dev/null
-autoload $^__autoload:t:r
+unfunction -m $^__autoload:t:r
+if (($#__autoload)) autoload $^__autoload:t:r
 
-if ([ ! -r $fpath[1].zwc ]||[ $__autoload[1]:h/*(.om[1]) -nt $fpath[1].zwc ]) then
-  mktemp -d -t zcompile | read __tmp
+# https://zsh-manual.netlify.app/functions?highlight=zwc#91-autoloading-functions
+if [ ! -r $fpath[1].zwc ]||[ $__autoload[1]:h/*(.om[1]) -nt $fpath[1].zwc ]
+then
+  mktemp --directory -t zcompile | read __tmp
   for __function ($__autoload) cp $__function $__tmp/$__function:t:r
   pushd $__tmp
   if (($+__autoload)) zcompile $fpath[1] *
@@ -26,7 +28,7 @@ source $fpath[1]:h-*/*.zsh(xN) ${ZDOTDIR:=$0:h}/source/*.zsh(.f[u-x]N)
 autoload compinit
 compinit -d $ZSH_CACHE_DIR/zcompdump
 
-add-zsh-hook precmd function() {
+add-zsh-hook precmd() {
   __pattern='__+([a-z])'
   unalias    -m $__pattern
   unfunction -m $__pattern
