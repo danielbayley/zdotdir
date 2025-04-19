@@ -2,6 +2,6 @@
 .DS_Store
 
 # Zsh
-.zcompdump
+.zcomp*
 .zsh_*
 *.zwc
