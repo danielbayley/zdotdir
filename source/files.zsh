@@ -7,7 +7,8 @@ autoload mkdir
 alias sbx=sandbox {mk,}t{e,}mp{,dir}=sandbox
 autoload sandbox
 
-alias symlink='ln -s' ln{-,}s=symlink
+alias ln{-,}s=symlink
+symlink() { mkdir -p $2:h && ln -s $@ }
 
 if (($+commands[npx])) then
   alias cp='npx cpy-cli'
