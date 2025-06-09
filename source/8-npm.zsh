@@ -1,9 +1,6 @@
 # https://nodejs.org/api
 alias js=node
 
-# https://github.com/Schniz/fnm/blob/master/docs/commands.md
-if (($+commands[fnm])) alias nvm=fnm
-
 # https://npmjs.com
 alias n=npm
 # https://pnpm.io
