@@ -1,9 +1,9 @@
 # https://nodejs.org/api
 alias js=node
 
-# https://npmjs.com
+# https://docs.npmjs.com/cli/commands
 alias n=npm
-# https://pnpm.io
+# https://pnpm.io/pnpm-cli
 if (($+commands[pnpm])) alias npm=pnpm
 # https://pnpm.io/cli/dlx
 if (($+functions[pnpx])) then
@@ -26,7 +26,7 @@ alias       czg='npx czg'
 alias   copilot='npx @githubnext/github-copilot-cli'
 
 # Compilers
-# https://www.typescriptlang.org/docs/handbook/compiler-options
+# https://typescriptlang.org/docs/handbook/compiler-options
 alias        ts{c,}='npx --package typescript tsc' typescript=tsc
 # https://github.com/wessberg/cjstoesm#cli-usage
 alias  cjs{to,-}esm='npx cjstoesm'
