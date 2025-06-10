@@ -4,7 +4,12 @@ alias js=node
 # https://docs.npmjs.com/cli/commands
 alias n=npm
 # https://pnpm.io/pnpm-cli
-if (($+commands[pnpm])) alias {npm,pn}=pnpm
+if (($+commands[pnpm])) then
+  alias {npm,pn}=pnpm
+
+  # https://pnpm.io/cli/env#use
+  alias nvm='pnpm env use --global'
+fi
 # https://pnpm.io/cli/dlx
 if (($+commands[pnpx])) then
   alias npx=pnpx
