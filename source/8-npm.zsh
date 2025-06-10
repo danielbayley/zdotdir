@@ -4,11 +4,10 @@ alias js=node
 # https://docs.npmjs.com/cli/commands
 alias n=npm
 # https://pnpm.io/pnpm-cli
-if (($+commands[pnpm])) alias npm=pnpm
+if (($+commands[pnpm])) alias {npm,pn}=pnpm
 # https://pnpm.io/cli/dlx
-if (($+functions[pnpx])) then
+if (($+commands[pnpx])) then
   alias npx=pnpx
-  autoload pnpx
 else
   alias npx='npx --yes --quiet'
 fi
