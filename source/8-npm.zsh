@@ -17,6 +17,8 @@ else
   alias npx='npx --yes --quiet'
 fi
 
+alias nt='npm test'
+
 # https://mrm.js.org/docs/getting-started#usage-via-npx
 alias       mrm='npx mrm'
 # https://github.com/depcheck/depcheck#readme
