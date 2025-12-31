@@ -1,9 +1,7 @@
-require "active_support/core_ext/string/inflections"
-
 class Zdotdir < Formula
   desc "Personal Zsh configuration"
   GITHUB_USER = GitHub.user["login"].freeze
-  homepage "https://github.com/#{GITHUB_USER}/#{name.demodulize.downcase}#readme"
+  homepage "https://github.com/#{GITHUB_USER}/#{@formula.name.downcase}#readme"
   latest = homepage.sub "#readme", ".git"
   url latest, using: :git, branch: "main"
   version "latest"
