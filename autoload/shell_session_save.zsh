@@ -1,4 +1,4 @@
-# FIXME https://apple.stackexchange.com/a/478437
+# FIXME https://apple.stackexchange.com/a/478437
 
 # Save the current state.
 if [ -n $SHELL_SESSION_FILE ]

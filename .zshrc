@@ -11,7 +11,7 @@ __autoload=(${ZDOTDIR:=$0:h}/autoload/*.*(xN))
 unfunction -m $^__autoload:t:r
 if (($#__autoload)) autoload $^__autoload:t:r
 
-# https://zsh-manual.netlify.app/functions?highlight=zwc#91-autoloading-functions
+# https://zsh-manual.netlify.app/functions?highlight=zwc#91-autoloading-functions
 if [ ! -r $fpath[1].zwc ]||[ $__autoload[1]:h/*(.om[1]) -nt $fpath[1].zwc ]
 then
   mktemp --directory -t zcompile | read __tmp
